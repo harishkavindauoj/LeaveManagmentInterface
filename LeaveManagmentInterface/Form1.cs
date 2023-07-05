@@ -18,17 +18,18 @@ namespace LeaveManagmentInterface
             InitializeComponent();
 
         }
-        public static string user = "";
+        
         public static string pass = "";
+        
+        
 
 
-      
         private void Sub_Click(object sender, EventArgs e)
         {
            
 
             string connetionString = null;
-            connetionString = "server=localhost;database=LeaveManagementSystem;uid=root;pwd='';";
+            connetionString = "server=localhost;database=LeaveManagementSystem;uid=root;pwd='';Convert Zero Datetime=True";
             MySqlConnection conn = new MySqlConnection(connetionString);
 
             
@@ -40,12 +41,25 @@ namespace LeaveManagmentInterface
                 DataTable dtable = new DataTable();
                 sda.Fill(dtable);
                 if (dtable.Rows.Count > 0)
-                {
+                {                   
+                    
 
-                    Form2 form = new Form2();
-                    form.Show();
-                    this.Hide();
-                    user = IDtxt.Text;
+                    if (IDtxt.Text.Substring(0, 3) == "EMP")
+                    {
+                        Form2 form = new Form2();
+                        form.name = IDtxt.Text;
+                        form.Show();
+                        this.Hide();
+
+                    }
+                    else if(IDtxt.Text.Substring(0, 3) == "ADM")
+                    {
+                        Form4 form4 = new Form4();
+                        this.Hide();
+                        form4.name = IDtxt.Text;
+                        form4.Show();
+                    }
+
 
                 }
                 else
@@ -65,5 +79,6 @@ namespace LeaveManagmentInterface
 
 
         }
+        
     }
 }
