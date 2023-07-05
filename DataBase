@@ -1,0 +1,61 @@
+create database LeaveManagementSystem;
+
+use LeaveManagementSystem;
+
+create table UserData(
+	UserID varchar(10),
+	PassWord varchar(6),
+	Name varchar(15),
+	Designation varchar(15),
+	Date date,
+	LeaveFrom date,
+	LeaveTo date,
+	Annual double ,
+	Casual double ,
+	Sick double ,
+	Remarks varchar(10),
+	Approval varchar(10)
+);
+
+desc UserData;
+
+insert into UserData values
+	('EMP003','545687','Daniel Husk','Prob Lecturer','2022-04-18','2022-04-19','2022-04-23','','','05','Medical Leave','Approved'),
+	('EMP001','123456','Saliny Perera','Temporary Lecturer','2022-04-21','2022-04-22','2022-04-23','01','','','','Approved'),
+	('EMP002','875641','Ravi Fernando','Senior Lecturer','2022-04-21','2022-04-22','2022-04-23','','01','','','Approved'),
+	('ADM006','282895','Sheril Gunarathne','Dean-FAS','2022-04-22','2022-04-23','2022-04-25','3','','','','Approved'),
+	('EMP001','123456','Saliny Perera','Temporary Lecturer','2022-04-30','2022-05-02','2022-05-05','03','','','','Approved'),
+	('EMP002','875641','Ravi Fernando','Senior Lecturer','2022-05-10','2022-05-11','2022-05-12','1','','','','Approved'),
+	('ADM002','568978','Raini Silva','HOD-Physical Science','2022-05-10','2022-05-11','2022-05-12','1','','','','Approved'),
+  	('EMP004','190774','M.K.Vijaykumar','Temporary Lecturer','2022-05-12','2022-05-13','2022-05-14','','1','','','Approved'),
+  	('EMP005','542369','Roshan De Silva','Temporary Lecturer','2022-05-16','2022-05-16','2022-05-20','','','5','Medical leave','Approved'),
+  	('EMP001','123456','Saliny Perera','Temporary Lecturer','2022-05-17','2022-05-17','2022-05-18','','1','','','Approved'),
+  	('EMP006','159874','Sunil Bandara','Senior Lecturer','2022-05-17','2022-05-18','2022-05-20','','2','','','Approved'),
+  	('EMP004','190774','M.K.Vijaykumar','Temporary Lecturer','2022-05-20','2022-05-20','2022-05-21','','1','','','Approved'),
+  	('EMP007','849562','Nishani Amarasinghe','Assistant Lecturer','2022-05-20','2022-05-20','2022-05-21','','1','','','Approved'),
+  	('EMP006','542369','Roshan De Silva','Assistant Lecturer','2022-05-30','2022-05-30','2022-05-31','1','','','','Approved'),
+  	('EMP008','784561','Sarath Wijesooriya','Senior Lecturer','2022-05-30','2022-05-30','2022-06-01','2','','','','Approved'),
+  	('EMP009','159874','Sunil Bandara','Senior Lecturer','2022-05-31','2022-05-31','2022-06-01','1','','','','Approved'),
+  	('ADM001','112546','Shan Fonseka','Hod-Management','2022-06-01','2022-06-02','2022-06-03','1','','','','Approved'),
+  	('ADM002','145654','Charles Godwin','Deaputy Rector','2022-06-03','2022-06-04','2022-06-07','4','','','','Approved'),
+  	('ADM005','789564','Pahan Rodrigro','HOD-Bio Science','2022-06-10','2022-06-11','2022-06-18','','','08','Medical Leave','Approved'),
+  	('ADM003','486515','Kamani Deegoda','Registar','2022-06-22','2022-06-23','2022-06-23','0.5','','','','Approved'),
+	('EMP016','421675','Vidusha Karthik','Senior Lecturer','2022-07-01','2022-07-02','2022-07-03','','','1','','Approved'),
+	('EMP017','060170','Kasun Nayanaith','Senior Lecturer','2022-07-02','2022-07-03','2022-07-05','','','02','','Approved'),
+  	('EMP010','134852','Danu Jesh','Senior Lecturer','2022-07-16','2022-07-17','2022-07-17','','','01','','Approved'),
+	('EMP011','146524','Kaushi Hewawasam','Temporary Lecturer','2022-07-20','2022-07-21','2022-07-23','03','','','','Approved'),
+	('EMP012','326457','Rajesh Wasu','Temporary Lecturer','2022-08-19','2022-08-20','2022-08-21','','02','','','Approved'),
+	('EMP013','854176','Virath Perera','Prob Lecturer','2022-08-20','2022-08-21','2022-08-21','','0.5','','','Approved'),
+	('EMP014','654987','Kaushi Hewawasam','Temporary Lecturer','2022-08-20','2022-08-21','2022-08-23','03','','','','Approved'),
+	('EMP015','789456','Kaweesha Premadasa','Temporary Lecturer','2022-08-21','2022-08-21','2022-08-21','','0.5','','','Approved'),
+	('EMP011','146524','Kaushi Hewawasam','Temporary Lecturer','2022-09-10','2022-09-10','2022-09-10','0.5','','','','Approved'),
+	('EMP013','854176','Virath Perera','Prob Lecturer','2022-09-13','2022-09-15','2022-09-17','','','02','','Approved');
+  
+
+  select * from UserData;
+
+   
+
+
+drop database LeaveManagementSystem;
+
